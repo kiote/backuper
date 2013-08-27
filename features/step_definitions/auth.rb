@@ -1,5 +1,5 @@
 Given(/^I have no token$/) do
-  session[:token].should be_nil
+  pending
 end
 
 Then(/^I should be redirected to yandex_autorize page$/) do

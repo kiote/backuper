@@ -6,7 +6,7 @@ class Backuper < Sinatra::Base
   config_file 'config.yml'
 
   get '/' do
-    "access token: #{@env.inspect}"
+    "Backups"
   end
 
   get '/login' do

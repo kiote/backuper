@@ -1,8 +1,16 @@
 require 'sinatra/base'
+require 'sinatra/config_file'
 
 class Backuper < Sinatra::Base
+  register Sinatra::ConfigFile
+  config_file 'config.yml'
+
   get '/' do
-    'Hello Backuper!'
+    "access token: #{@env.inspect}"
+  end
+
+  get '/login' do
+    redirect "https://oauth.yandex.ru/authorize?response_type=token&client_id=#{settings.yandex_client_id}"
   end
 
   # start the server if ruby file executed directly

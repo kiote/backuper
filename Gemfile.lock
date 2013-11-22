@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     backports (3.3.3)
+    coderay (1.0.9)
     cucumber-sinatra (0.5.0)
       templater (>= 1.0.0)
     diff-lcs (1.2.4)
@@ -10,9 +11,14 @@ GEM
     haml (4.0.3)
       tilt
     highline (1.6.19)
+    method_source (0.8.2)
     mini_portile (0.5.1)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -29,6 +35,7 @@ GEM
       rack-test
       sinatra (~> 1.4.2)
       tilt (~> 1.3)
+    slop (3.4.6)
     templater (1.0.0)
       diff-lcs (>= 1.1.2)
       extlib (>= 0.9.5)
@@ -45,6 +52,7 @@ PLATFORMS
 DEPENDENCIES
   cucumber-sinatra
   haml
+  pry
   sinatra
   sinatra-contrib
   webrat

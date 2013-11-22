@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/config_file'
 require 'haml'
+require 'pry'
 
 class Backuper < Sinatra::Base
   register Sinatra::ConfigFile
@@ -21,7 +22,8 @@ class Backuper < Sinatra::Base
   end
 
   post '/' do
-    session['m'] = params[:hash]
+    session['m'] = params[:hash][14, 32]
+    # binding.pry
   end
 
   # start the server if ruby file executed directly

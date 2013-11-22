@@ -8,3 +8,5 @@ gem 'cucumber-sinatra'
 gem 'webrat'
 
 gem 'haml'
+
+gem 'pry'

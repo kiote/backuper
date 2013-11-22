@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/config_file'
+require 'haml'
 
 class Backuper < Sinatra::Base
   register Sinatra::ConfigFile
@@ -8,8 +9,7 @@ class Backuper < Sinatra::Base
   enable :sessions
 
   get '/' do
-    "Backups"
-    session['m'] = 'Hello World!'
+    haml :index
   end
 
   get '/login' do
@@ -18,6 +18,10 @@ class Backuper < Sinatra::Base
 
   get '/some' do
     session['m']
+  end
+
+  post '/' do
+    session['m'] = params[:hash]
   end
 
   # start the server if ruby file executed directly

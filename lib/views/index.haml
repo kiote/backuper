@@ -1,0 +1,16 @@
+!!!  
+%html  
+  %head  
+    %script{src: "jquery-latest.js", type: "text/javascript"}
+    %title backuper
+
+    :javascript
+      $(document).ready(function() {
+        $.post('/save', {hash: document.location.hash});
+      }
+
+
+  %body  
+    %h1 Welcome  
+    %p  
+      Welcome to my website made with Sinatra and HAML  
